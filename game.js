@@ -115,7 +115,8 @@ function runLevel(level, Display, andThen) {
     box.addEventListener("keydown", keydownHandler);
 
     function selectedIndexChangedHandler() {
-        level.player = document.getElementById("playerSelect").options[document.getElementById("playerSelect").selectedIndex].text;
+        let playerSelect = document.getElementById("playerSelect");
+        level.player = playerSelect.options[playerSelect.selectedIndex].text;
         display.drawFrame();
     }
     playerDropdown.addEventListener("change", selectedIndexChangedHandler);
@@ -145,7 +146,7 @@ function Vector(x, y) {
 }
 
 //=============================================================
-//Interface Creation
+//Interface Elements
 //=============================================================
 var box = document.createElement("input");
 box.type = "textbox";
