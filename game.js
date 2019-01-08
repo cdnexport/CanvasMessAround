@@ -123,7 +123,7 @@ function runLevel(level, Display, andThen) {
 }
 
 function runGame(Display) {
-    let phrases = ["this phrase", "confederacy"];
+    let phrases = ["i have a lot of spaces and take up rooooom.", "this phrase", "confederacy"];
     function startLevel(level) {
         runLevel(new Level(phrases[level]), Display, function(status) {
             //check status of the level ie win/lose
@@ -223,12 +223,25 @@ CanvasDisplay.prototype.drawPlayer = function() {
 }
 
 var phraseStartY = 500;
+var lineHeight = 40;
 CanvasDisplay.prototype.drawPhrase = function() {
     let nextLetterX = xStartPoint;
     let nextLetterY = phraseStartY;
 
-    this.level.phraseMasked.split("").forEach((letter) => {
-        this.drawText(nextLetterX, nextLetterY, letter, "black");
+    let words = this.level.phraseMasked.split(" ");
+    words.forEach((word) => {
+        let wordSize = word.length * (letterSize + letterGap);
+        if (this.canvas.width <= nextLetterX + wordSize) {
+            nextLetterX = xStartPoint;
+            nextLetterY = nextLetterY + lineHeight;  
+        }
+
+        word.split("").forEach((letter) => {
+            this.drawText(nextLetterX, nextLetterY, letter, "black");
+            nextLetterX = nextLetterX + letterSize + letterGap;
+        });
+
+        this.drawText(nextLetterX, nextLetterY, " ", "black");
         nextLetterX = nextLetterX + letterSize + letterGap;
     });
 }
