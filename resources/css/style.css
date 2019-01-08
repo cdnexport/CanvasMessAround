@@ -50,8 +50,8 @@ nav.row {
     padding: 0 10px;
 }
 
-.main-nav li a:link,
-.main-nav li a:visited {
+.headerLink:link,
+.headerLink:visited {
     text-decoration: none;
     color: rgb(99, 23, 23);
     border-bottom: 2px solid transparent;
@@ -60,7 +60,7 @@ nav.row {
     text-transform: uppercase;
 }
 
-.main-nav li a:active,
-.main-nav li a:hover {
+.headerLink:active,
+.headerLink:hover {
     border-bottom: 2px solid rgb(99, 23, 23);
 }
