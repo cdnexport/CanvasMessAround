@@ -213,7 +213,7 @@ CanvasDisplay.prototype.drawPlayer = function() {
         let hangingPointX = this.gallowsArmEnd.x - Math.round(playerImage.width / 2);
         let coordinates = null;
         if (this.level.lives === 4) {
-            coordinates = new Vector(20, 100);
+            coordinates = new Vector(450, 298);
         } else {
             coordinates = new Vector(hangingPointX - magicAdjustmentX, this.gallowsArmEnd.y - magicAdjustmentY);
         }
