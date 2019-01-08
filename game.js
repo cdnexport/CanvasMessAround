@@ -208,15 +208,16 @@ CanvasDisplay.prototype.drawPlayer = function() {
     let playerImage = new Image();
     playerImage.src = "img/characters/" + this.level.player + "/" + this.level.lives + ".png";
     let magicAdjustmentY = 20;
+    let magicAdjustmentX = 2.5;
     playerImage.onload = () => {
         let hangingPointX = this.gallowsArmEnd.x - Math.round(playerImage.width / 2);
         let coordinates = null;
         if (this.level.lives === 4) {
             coordinates = new Vector(20, 100);
         } else {
-            coordinates = new Vector(hangingPointX, this.gallowsArmEnd.y);
+            coordinates = new Vector(hangingPointX - magicAdjustmentX, this.gallowsArmEnd.y - magicAdjustmentY);
         }
-        this.cx.drawImage(playerImage, coordinates.x, coordinates.y - magicAdjustmentY);
+        this.cx.drawImage(playerImage, coordinates.x, coordinates.y);
     }
 }
 
