@@ -1,0 +1,69 @@
+/* =================================================== */
+/* BASIC SETUP */
+/* =================================================== */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	color: rgb(75, 74, 74);
+	font-family: "Calibri", "Arial", sans-serif;
+	font-size: 20px;
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+}
+
+/* =================================================== */
+/* HEADER */
+/* =================================================== */
+header {
+    width: 100%;
+}
+
+.main-nav {
+    list-style: none;
+}
+
+.main-nav > li {
+    display: inline-block;
+}
+
+.main-nav .btn {
+    /* padding-bottom: 20px; */
+}
+
+nav.row {
+    display: flex;
+    justify-content: center;
+}
+
+/* =================================================== */
+/* REUSABLE COMPONENTS */
+/* =================================================== */
+.row {
+    margin: 0 auto;
+    max-width: 1140px;
+}
+
+.logo {
+    height: 150px;
+    width: auto;
+    padding: 0 10px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    text-decoration: none;
+    color: rgb(99, 23, 23);
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+.main-nav li a:active,
+.main-nav li a:hover {
+    border-bottom: 2px solid rgb(99, 23, 23);
+}

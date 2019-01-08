@@ -3,13 +3,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hangman</title>
+
+    <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="game.css">
+
+    <title>Game</title>
 </head>
 <body>
-    <script src="game.js"></script>
-    <script>
-        runGame(CanvasDisplay);    
-    </script>
+    <header>
+        <nav class="row">
+            <ul class="main-nav">
+                <li><a href="#">About</a></li>
+                <li><img class="logo" src="resources/img/logo.png" alt="Logo Here"></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="gameArea">
+        <div class="row">
+            <script src="game.js"></script>
+            <script>
+                runGame(CanvasDisplay);    
+            </script>
+        </div>
+    </section>
+    <link type="javascript" href="resources/js/game.js">
 </body>
 </html>
