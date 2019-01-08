@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+}
+div.game {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.game canvas {
+
+}
+
+input.guess {
+
+}
