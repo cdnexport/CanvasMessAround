@@ -309,7 +309,7 @@ CanvasDisplay.prototype.drawGuessLetters = function() {
                 successRows++;
                 xSuccessDrawPoint = xStartPoint;
             }
-            this.drawText(xSuccessDrawPoint, ySuccessDrawPoint + (successRows * letterSize), guess["letter"], "green");
+            this.drawText(xSuccessDrawPoint, ySuccessDrawPoint + (successRows * lineHeight), guess["letter"], "green");
 
             xSuccessDrawPoint += letterSize + letterGap;
         } else {
@@ -317,7 +317,7 @@ CanvasDisplay.prototype.drawGuessLetters = function() {
                 failureRows++;
                 xFailureDrawPoint = xStartPoint;
             }
-            this.drawText(xFailureDrawPoint, yFailureDrawPoint + (failureRows * letterSize), guess["letter"], "red");
+            this.drawText(xFailureDrawPoint, yFailureDrawPoint + (failureRows * lineHeight), guess["letter"], "red");
 
             xFailureDrawPoint += letterSize + letterGap;
         }
